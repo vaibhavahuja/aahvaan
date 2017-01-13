@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+
+body,html
+{
+	margin: 0px;
+	font-family: 'Alegreya Sans';
+	height: auto;
+}
+header
+{
+	min-height: 100vh;
+	background: url('../images/landingPage.jpg') #020e18 no-repeat center center fixed;
+	padding-bottom: 100px;
+	position: relative;
+}
+header h1
+{
+    font-size: 3em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #dcd7c4;
+    text-shadow: 2px 2px 0px #000;
+}
+.navbar-fixed-top
+{
+	background:rgba(0,0,0,0.95) !important;
+	box-shadow: 0px 3px 5px rgba(0,0,0,0.41);
+	top: -1000px;
+	transition: all .5s ease;
+}
+.navbar-default
+{
+	background: none;
+	border: none;
+	color: #fff;
+	font-family: 'Alegreya Sans';
+	padding: 35px 60px;
+	letter-spacing:2px;
+	box-shadow: none;
+}
+.navbar-default .navbar-brand,.navbar-default .navbar-nav>li>a
+{
+	color: #fff;
+	text-transform: uppercase;
+	padding: 2px 10px;
+	margin: auto 10px;
+	border-radius: 5px;
+	transition: all .2s ease;
+	height: auto;
+}
+.navbar-default .navbar-brand:hover
+{
+	color: #fff;
+}
+.navbar-default .navbar-nav>li>a:hover
+{
+	color: #000;
+	background-color: #ffc800;
+	text-transform: uppercase;
+}
+.navbar-default .navbar-right>li>a:hover
+{
+	background: none !important;
+}
+
+.countdown-section {
+  display:inline-block;
+}
+
+.countdown-section>span {
+  display:block;
+}
+
+.countdown-section+.countdown-section {
+  margin-left:40px;
+}
+
+.countdown-section .countdown-amount {
+  font-size:3em;
+  font-weight:Bold;
+  text-align:Center;
+}
+
+.countdown-section .countdown-period {
+  text-transform:uppercase;
+  font-weight:Bold;
+  font-size:0.8em;
+  text-align:Center;
+  margin-bottom:0.783vw;
+}
+
+
+
+@media(max-width: 980px){
+header
+{
+	min-height: 100vh;
+	background: url('../images/landingPage.jpg') #000 no-repeat center;
+	background-size: auto 100%;
+	padding-bottom: 100px;
+}
+.navbar-fixed-top
+{
+	background:rgba(0,0,0,0.95) !important;
+	box-shadow: 0px 3px 5px rgba(0,0,0,0.41);
+	top: -1000px;
+	transition: all .5s ease;
+}
+.navbar-default
+{
+	background: none;
+	border: none;
+	color: #fff;
+	font-family: 'Alegreya Sans';
+	padding: 35px 20px;
+	letter-spacing:1px;
+}
+.navbar-default .navbar-brand,.navbar-default .navbar-nav>li>a
+{
+	color: #fff;
+	text-transform: uppercase;
+	padding: 2px 10px;
+	margin: auto 3px;
+	border-radius: 5px;
+	transition: all .2s ease;
+	height: auto;
+}
+.navbar-default .navbar-brand:hover
+{
+	color: #fff;
+}
+.navbar-default .navbar-nav>li>a:hover
+{
+	color: #000;
+	background-color: rgba(255,255,255,0.95);
+	text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+}
+@media(max-width: 780px){
+header
+{
+	min-height: auto;
+	background: url('../images/landingPage.jpg') #000 no-repeat center;
+	background-size: auto 100%;
+	padding-bottom: 100px;
+}
+.navbar-fixed-top
+{
+	background:rgba(0,0,0,0.95) !important;
+	box-shadow: 0px 3px 5px rgba(0,0,0,0.41);
+	top: 0px !important;
+	transition: all .5s ease;
+}
+.navbar-default
+{
+	background: none;
+	border: none;
+	color: #fff;
+	font-family: 'Alegreya Sans';
+	padding: 10px;
+	letter-spacing:1px;
+}
+.navbar-default .navbar-right>li>a
+{
+	float: left;
+	margin: 10px 0px !important;
+}
+.navbar-default .navbar-brand,.navbar-default .navbar-nav>li>a
+{
+	color: #fff;
+	text-transform: uppercase;
+	margin: auto 3px;
+	border-radius: 5px;
+	transition: all .2s ease;
+	height: auto;
+	padding: 15px;
+}
+.navbar-default .navbar-brand:hover
+{
+	color: #fff;
+}
+.navbar-default .navbar-nav>li>a:hover
+{
+	color: #000;
+	background-color: rgba(255,255,255,0.95);
+	text-transform: uppercase;
+}
+header h1
+{
+    font-size: 2em;
+    margin-top: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #dcd7c4;
+    text-shadow: 2px 2px 0px #000;
+}
+.countdown-section {
+  display:inline-block;
+}
+
+.countdown-section>span {
+  display:block;
+  margin: auto;
+}
+
+.countdown-section+.countdown-section {
+  margin-left:10px;
+}
+
+.countdown-section .countdown-amount {
+  font-size:1em;
+  font-weight:Bold;
+  text-align:Center;
+}
+
+.countdown-section .countdown-period {
+  text-transform:uppercase;
+  font-weight:Bold;
+  font-size:0.5em;
+  text-align:Center;
+  margin-bottom:0.783vw;
+}
+canvas
+{
+	display: none;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

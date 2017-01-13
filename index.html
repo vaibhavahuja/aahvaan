@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aahvaan</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700,800,900" rel="stylesheet">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/styleva.css">
+
+		<!-- Load the Paper.js library -->
+		<script type="text/javascript" src="js/paper.js"></script>
+		<script type="text/paperscript" canvas="canvas-1">
+		// Code ported to Paper.js from http://the389.com/9/1/
+		// with permission.
+
+		var values = {
+			friction: 0.1,
+			timeStep: 0.01,
+			amount: 15,
+			mass: 2,
+			count: 0
+		};
+		values.invMass = 1 / values.mass;
+
+		var path, springs;
+		var size = view.size * [1.2, 1];
+
+		var Spring = function(a, b, strength, restLength) {
+			this.a = a;
+			this.b = b;
+			this.restLength = restLength || 80;
+			this.strength = strength ? strength : 0.55;
+			this.mamb = values.invMass * values.invMass;
+		};
+
+		Spring.prototype.update = function() {
+			var delta = this.b - this.a;
+			var dist = delta.length;
+			var normDistStrength = (dist - this.restLength) /
+					(dist * this.mamb) * this.strength;
+			delta.y *= normDistStrength * values.invMass * 0.2;
+			if (!this.a.fixed)
+				this.a.y += delta.y;
+			if (!this.b.fixed)
+				this.b.y -= delta.y;
+		};
+
+
+		function createPath(strength) {
+			var path = new Path({
+				fillColor: '#ffc800'
+			});
+			springs = [];
+			for (var i = 0; i <= values.amount; i++) {
+				var segment = path.add(new Point(i / values.amount, 0.5) * size);
+				var point = segment.point;
+				if (i == 0 || i == values.amount)
+					point.y += size.height;
+				point.px = point.x;
+				point.py = point.y;
+				// The first two and last two points are fixed:
+				point.fixed = i < 2 || i > values.amount - 2;
+				if (i > 0) {
+					var spring = new Spring(segment.previous.point, point, strength);
+					springs.push(spring);
+				}
+			}
+			path.position.x -= size.width / 4;
+			return path;
+		}
+
+		function onResize() {
+			if (path)
+				path.remove();
+			size = view.bounds.size * [2, 1];
+			path = createPath(0.1);
+		}
+
+		function onMouseMove(event) {
+			var location = path.getNearestLocation(event.point);
+			var segment = location.segment;
+			var point = segment.point;
+
+			if (!point.fixed && location.distance < size.height / 4) {
+				var y = event.point.y;
+				point.y += (y - point.y) / 6;
+				if (segment.previous && !segment.previous.fixed) {
+					var previous = segment.previous.point;
+					previous.y += (y - previous.y) / 24;
+				}
+				if (segment.next && !segment.next.fixed) {
+					var next = segment.next.point;
+					next.y += (y - next.y) / 24;
+				}
+			}
+		}
+
+		function onFrame(event) {
+			updateWave(path);
+		}
+
+		function updateWave(path) {
+			var force = 1 - values.friction * values.timeStep * values.timeStep;
+			for (var i = 0, l = path.segments.length; i < l; i++) {
+				var point = path.segments[i].point;
+				var dy = (point.y - point.py) * force;
+				point.py = point.y;
+				point.y = Math.max(point.y + dy, 0);
+			}
+
+			for (var j = 0, l = springs.length; j < l; j++) {
+				springs[j].update();
+			}
+			path.smooth({ type: 'continuous' });
+		}
+
+		function onKeyDown(event) {
+			if (event.key == 'space') {
+				path.fullySelected = !path.fullySelected;
+				path.fillColor = path.fullySelected ? null : 'black';
+			}
+		}
+		</script>
+		<script src='http://keith-wood.name/js/jquery.plugin.js'></script>
+<script src='http://keith-wood.name/js/jquery.countdown.js'></script>
+
+<script src="js/counter.js"></script>
+<script src="js/main.js"></script>
+		
+<!-- scripts for popup -->
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css'>
+
+
+ 
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#"><b>AAHVAAN</b></a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li><a href="#sportspage">Sports</a></li>
+			<li><a href="#otherevents">Other Events</a></li>
+	        <li><a href="#contact">Reach Out</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#" style="margin:0px 0px;height:20px;vertical-align:middle;position:relative;top:-5px;"><img src="images/fb.png"></a></li>
+	        <li><a href="#" style="margin:0px 0px;height:20px;position:relative;top:-5px;"><img src="images/tw.png"></a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<header>
+		<nav class="navbar navbar-default always">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#"><b>AAHVAAN</b></a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li><a href="#sportspage">Sports</a></li>
+				<li><a href="#otherevents">Other Events</a></li>
+		        <li><a href="#contact">Reach Out</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#" style="margin-right:0px;"><img src="images/fb.png"></a></li>
+		        <li><a href="#" style="margin-left:0px;"><img src="images/tw.png"></a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		<div class="header_content">
+				<center>
+				<h1>Aahvaan begins in</h1>
+				<div id="countdown" style="font-size:2em; color:#ffc800;font-family:'Raleway';"></div>
+				</center>
+
+		</div>
+		<canvas id="canvas-1" style="width:100%;height:50vh;position:absolute;bottom:0px;"></canvas>
+	</header>
+	<script>
+    jQuery.noConflict();
+    (function ($) {
+        function readyFn() {
+            jQuery('.okokok').scrollFadeOut(300,500);
+        }
+
+        $(document).ready(readyFn); 
+    })(jQuery);
+</script>
+	<div style="background-color:#ffc800;color:#000;padding-bottom:50px;padding-top:50px;"><p class="okokok" style="text-align:center;font-family:'Raleway';font-size:1.2em;width:700px;max-width:90%;margin:auto;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br><b style="font-size:1.2em;">Team Aahvaan</b></p></div>
+	<img src="images/save.png" style="width:100%;margin-top:-10px;background-color:#ccc;margin-bottom:-5px;">	
+<div class="containersc">
+
+
+<div class="socialcause">
+<div class="hometown">
+    <div class="heart"> </div>
+    <div id="top">AAHVAAN</div>
+    <div class="cause">#pointingNE</div>
+	<button class="mybutton"> KNOW MORE </button>
+</div>
+</div>
+
+</div>
+
+
+<a name="sportspage"></a>
+
+
+
+	
+	
+	
+	
+	
+	
+	<h1 class="pla" style="margin-bottom:60px;"> SPORTS </h1>		
+
+	
+	
+
+<script>
+    jQuery.noConflict();
+    (function ($) {
+        function readyFn() {
+            jQuery('.random').scrollFadeIn(300,300);
+        }
+
+        $(document).ready(readyFn); 
+    })(jQuery);
+</script>
+
+
+
+	<ul id="categories" class="random">
+  <li class="pusher"></li>
+	<li>
+      <div>
+        <img src="sports/chess.png" href="#chess" data-effect="mfp-zoom-in">
+		</img>
+        
+    </div>
+  </li>
+    <li>
+      <div>
+        <img src="sports/basketball.png" href="#basketball" data-effect="mfp-zoom-in">
+        </img>
+    </div>
+	
+  </li>
+  <li>
+      <div>
+        <img src="sports/athletics.png" href="#athletics" data-effect="mfp-zoom-in">
+			
+		</img>
+        
+    </div>
+  </li>
+  <li>
+      <div>
+        <img src="sports/badminton.png" href="#badminton" data-effect="mfp-zoom-in">
+		
+		</img>
+        
+    </div>
+  </li>
+  <li class="pusher"></li>
+  <li>
+      <div>
+        <img src="sports/cricket.png" href="#cricket" data-effect="mfp-zoom-in">
+		
+		</img>
+        
+    </div>
+  </li>
+  
+  <li>
+      <div>
+        <img src="sports/football.png" href="#football" data-effect="mfp-zoom-in">
+		
+		</img>
+        
+    </div>
+  </li>
+  <li class="pusher"></li>
+  <li>
+      <div>
+        <img src="sports/kabaddi.png" href="#kabaddi" data-effect="mfp-zoom-in">
+		
+		</img>
+        
+    </div>
+  </li>
+  <li>
+      <div>
+        <img src="sports/plift.png" href="#plift" data-effect="mfp-zoom-in">
+		
+		</img>
+        
+    </div>
+  </li><li>
+      <div>
+        <img src="sports/tennis.png" href="#tennis" data-effect="mfp-zoom-in">
+		
+		</img>
+        
+    </div>
+  </li>
+  <li>
+      <div>
+        <img src="sports/tabletennis.png" href="#tabletennis" class="okok" data-effect="mfp-zoom-in">
+		
+		</img>
+        
+    </div>
+  </li>
+  <li>
+      <div>
+        <img src="sports/volleyball.png" class="okok" href="#volleyball" data-effect="mfp-zoom-in">
+		
+		</img>
+		
+      </div>
+  </li>
+  
+ </ul>
+ 
+ <div class="otherevents">
+ <a name="otherevents"></a>
+
+ <h1 class="pla"> OTHER EVENTS </h1>
+ 
+ <div class="event1">
+<img src="http://lorempixel.com/270/350/sports"></img>
+ </div>
+  <div class="event1">
+<img src="http://lorempixel.com/270/350/sports"></img>
+ </div>
+  <div class="event1">
+<img src="http://lorempixel.com/270/350/sports"></img>
+ </div>
+  <div class="event1">
+<img src="http://lorempixel.com/270/350/sports"></img>
+ </div>
+  <div class="event1">
+<img src="http://lorempixel.com/270/350/sports"></img>
+ </div>
+<div class="event1">
+<img src="http://lorempixel.com/270/350/sports"></img>
+</div>
+</div> 
+
+ 
+<a name="contact"></a>
+<h1 class="pla"> CONTACT US </h1>
+
+
+<div id="map">
+
+<iframe width="100%" height="280" style="border:0; margin-top:20px; filter:grayscale(75%);" src="https://www.google.com/maps/embed/v1/search?q=Delhi%20Technological%20University%2C%20Delhi%2C%20India&key=AIzaSyAk6iYri8X-e_d3yeA3QMYcWYMeQGIyErQ" allowfullscreen></iframe>
+</div>
+
+<footer id="footer">
+<p style="font-family:Raleway;font-size:1em;text-align:center;color:white;">email@aahvan.com</p>
+<div class="line"></div>
+<a href="#"><img src="images/fb.png"></a>
+<a href="#"><img src="images/tw.png"></a>
+
+</footer>  
+ 
+	
+</body>
+
+<!-- Popup > add the rules here according to the sport written in id-->
+<div id="chess" class="white-popup mfp-with-anim mfp-hide">
+<h1>put rules here</h1>.
+put the rules fput the rules for chess here.put the rules for chess here.or chess here.put the rules for chess here.<br>
+put the rules for chess here.put the rules for chess here.<br>
+put the rules for chess here.put the rules for chess here.<br>
+put the rules for chess here.put the rules for chess here.<br>
+put the rules for chess here.put the rules for chess here.<br>
+put the rules for chess here.put the rules for chess here.<br>
+put the rules for chess here.put the rules for chess here.<br>
+put the rules for chess here.put the rules for chess here.<br>
+put the rules for chess here.put the rules for chess here.<br>
+put the rules for chess here.put the rules for chess here.<br>
+</div>
+
+<div id="basketball" class="white-popup mfp-with-anim mfp-hide">
+
+<h1> put rules here </h1>
+
+
+</div>
+
+<div id="athletics" class="white-popup mfp-with-anim mfp-hide">
+
+<h1> put rules here </h1>
+
+
+</div>
+
+<div id="badminton" class="white-popup mfp-with-anim mfp-hide">
+
+<h1> put rules here </h1>
+
+
+</div>
+<div id="cricket" class="white-popup mfp-with-anim mfp-hide">
+
+<h1> put rules here </h1>
+
+
+</div>
+<div id="football" class="white-popup mfp-with-anim mfp-hide">
+
+<h1> put rules here </h1>
+
+
+</div>
+<div id="kabaddi" class="white-popup mfp-with-anim mfp-hide">
+
+<h1> put rules here </h1>
+
+
+</div>
+<div id="plift" class="white-popup mfp-with-anim mfp-hide">
+
+<h1> put rules here </h1>
+
+
+</div>
+<div id="tennis" class="white-popup mfp-with-anim mfp-hide">
+
+<h1> put rules here </h1>
+
+
+</div>
+<div id="tabletennis" class="white-popup mfp-with-anim mfp-hide">
+
+<h1> put rules here </h1>
+
+
+</div>
+<div id="volleyball" class="white-popup mfp-with-anim mfp-hide">
+
+<h1> put rules here </h1>
+
+
+</div>
+<div id="basketball" class="white-popup mfp-with-anim mfp-hide">
+
+<h1> put rules here </h1>
+
+
+</div>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js'></script>
+<script src="js/popup.js"></script>
+<script src='http://css-tricks.com/examples/BlurredText/js/jquery.lettering.js'></script>
+<script src="js/socialcause.js"></script>
+<script src="js/scrollFade.min.js"></script>
+</html>
