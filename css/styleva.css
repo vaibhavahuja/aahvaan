@@ -160,7 +160,7 @@
   z-index: 0;
   width: 150px;
   height: 150px;
-  position: absolute;
+  position: relative;
   top: 50%;
   margin-top: -140px;
   left: 50%;
@@ -175,7 +175,7 @@
   font-weight: bold;
   font-size: 1.5em;  
   overflow:hidden;
-  position: absolute;
+  position: relative;
   z-index: 0;
   width: 512px;
   height: 512px;
@@ -253,7 +253,15 @@
 	top:395px;
 	left:165px;
 	position:relative;
+	transition:0.3s linear;
 }
+
+.mybutton:hover{
+	color:#d9d9db;
+	transition:0.3s linear;
+
+}
+
 .heart {
   animation: HEARTBEAT 2.5s infinite;
  }
@@ -303,30 +311,81 @@
 }
 
 .otherevents{
-	height:800px;
+	height:400px;
 	width:auto;
-	
-	margin-left:170px;
+	margin-left:auto;
 	margin-right:auto;
 }
+	
+	
 
-/* the posters for other events*/
-.event1{
-	overflow:hidden;
-	height:350px;
-	width: 240px;
-	background-color:pink;
+
+
+@media (max-width: 980px){
+#categories{
+  overflow:hidden;
+  width:75vw;
+  margin:0 auto; 
+}
+
+
+.socialcause{
+  overflow:hidden;
+  width:auto;
+  height:450px;
+  background: linear-gradient(to bottom, #ccc,white);  
+  padding-left:20vw;
+  padding-top:50px;
+  display:block;
+  margin-top:0;
+  
+}
+
+.socialcause .mybutton{
+	height:45px;
+	width:180px;
+	z-index:1;
+	font-family:Raleway;
+	font-weight:700;
+	font-size:2.1vw;
+	border:none;
+	border-radius:5px;
+	color:white;
+	background-color:#ef4657;
+	top:395px;
+	left:165px;
 	position:relative;
-	margin:20px;
-	float:left;
-	border-radius:2.5px;
-}
-
-.event1 img:hover{
-	cursor:pointer;
-	filter:brightness(0.76);
-	transition:cubic-bezier(.22,.8,.52,1) 0.18s;
+	transition:0.3s linear;
+}	
 
 }
+
+
+@media(max-width: 750px){
+	#categories{
+  overflow:hidden;
+  width:85vw;
+  margin:0 auto; 
+}
+	
+.socialcause{
+  overflow:hidden;
+  width:auto;
+  height:450px;
+  background: linear-gradient(to bottom, #ccc,white);  
+  padding-top:50px;
+  padding-left:0.9px;
+  display:block;
+  margin-top:0;
+  margin-left:-50px;
+}
+	
+
+	
+	
+	
+}
+
+
 
 
