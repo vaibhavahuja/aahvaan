@@ -148,10 +148,9 @@
   overflow:hidden;
   width:auto;
   height:450px;
-  background: linear-gradient(to bottom, #ccc,white);  
   padding-left:30vw;
   display:block;
-  margin-top:0;
+  padding-top:50px;
   
 }
 
@@ -179,7 +178,7 @@
   z-index: 100;
   width: 512px;
   height: 512px;
-  color: #FFF;
+  color: black;
   margin-top:-30px;
   
 }
@@ -225,7 +224,7 @@
 
 
 .cause {
-  font-family:"VT323";
+  font-family:"Raleway";
   display: inline-block;
   width: 100%;
   height: 300px;
@@ -316,6 +315,7 @@
 	margin-top:60px;
 	margin-left:auto;
 	margin-right:auto;
+	margin-bottom:60px;
 }
 
 .color-list {
@@ -565,6 +565,28 @@
 
 }
 
+/* event nights */
+
+.livenight{
+	width:auto;
+	height:300px;
+	margin-left:100px;
+	margin-right:100px;
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tlt{
+	width: auto;
+	height:280px;
+}
 
 
+/* sponsors */
 
+.sponsors{
+	
+	height:400px;
+}
