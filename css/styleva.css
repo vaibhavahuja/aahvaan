@@ -256,8 +256,8 @@
 }
 
 .mybutton:hover{
-	color:#d9d9db;
-	transition:0.3s linear;
+	box-shadow: 4px 4px 10.5px #888888;
+	transition:0.2s linear;
 
 }
 
@@ -576,6 +576,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+	overflow:hidden;
+
 }
 
 .tlt{
@@ -587,6 +589,16 @@
 /* sponsors */
 
 .sponsors{
+	overflow:hidden;
+	width:50%;
+	margin:auto;
 	
-	height:400px;
+}
+
+
+.sponsors img{
+	width:100%;
+	height:auto;
+	display:block;
+	margin:auto;
 }
