@@ -4,20 +4,10 @@
 
 * {margin: 0; padding: 0;}
 
-html {
-	height: 100%;
-	/*Image only BG fallback*/
-
-
-
-}
-
 html,body {
 	font-family: "Oswald", sans-serif;
 	height: 100%;
-	/*background:
-		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6)); */
-		background: url('../images/ss.png') no-repeat center center fixed;
+	background: url('../images/ss.png') no-repeat center center fixed;
 }
 
 
@@ -38,11 +28,25 @@ img {
 }
 /*form styles*/
 #regform {
-	width: 40vw;
-	margin: -10px 0px 0px 25vw;
+	width: 80%;
+	margin-left:17%;
+	margin-top:30px;
+	margin-right:auto;
 	text-align: center;
-	position: relative;
+	position: absolute;
 }
+
+@media(max-width:768px){
+#regform {
+	width: 90%;
+	margin-left:7%;
+	margin-top:0;
+	text-align: center;
+	position: absolute;
+}	
+}
+
+
 #regform fieldset {
 	background: white;
 	border: 0 none;
@@ -50,13 +54,26 @@ img {
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
 	padding: 20px 30px;
 	box-sizing: border-box;
-	width: 100%;
-	margin:  10%;
+	width: 80%;
+	margin:0 auto;
 
 	/*stacking fieldsets above each other*/
 	position: absolute;
 }
-
+@media(max-width:768px){
+	
+#regform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 96%;
+	margin:0 auto;
+	position: absolute;
+}
+}
 
 
 /*Hide all except first fieldset*/
@@ -93,9 +110,9 @@ img {
 /*headings*/
 .fs-title {
 	font-family: "Oswald";
-	font-size: 1.5vw;
+	font-size: 25px;
 	font-weight: bold;
-	text-decoration: underline;
+	text-decoration: none;
 	text-transform: uppercase;
 	color: #2C3E50;
 	margin-bottom: 10px;
@@ -103,7 +120,7 @@ img {
 .fs-subtitle {
 	font-family: "Oswald";
 	font-weight: normal;
-	font-size: 1.5vw;
+	font-size: 25px;
 	color: #666;
 	margin-bottom: 20px;
 }
@@ -161,25 +178,9 @@ img {
 .ol_content{
 	text-align: left;
 	font-style: normal;
-	font-size: 1.0vw;
+	font-size: 15px;
 	font-family: "raleway" ;
 	padding: 10px 0 10px 15px;
 }
-.ol_content li{
 
-	letter-spacing: .2px;
 
-}
-
-/*footer*/
-footer {
-  width: 100%;
-	margin-top: 800px;
-  background-color:#ccc ;
-  padding-bottom: 7px;
-
-}
-footer p{
-  margin-left: 40%;
-	font-size: 1.3vw;
-}

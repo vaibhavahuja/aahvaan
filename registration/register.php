@@ -86,12 +86,7 @@
 </form>
 
 
-<!-- <div class="navbar navbar-default navbar-fixed-bottom">
-  <div class="container">
-    <p class="navbar-text">&copy; AahvaanDTU. All Rights Reserved.</p>
-  </div>
 
-</div>  -->
 
   <script src="js/register.js" type="text/javascript" ></script>
   <script type="text/javascript">

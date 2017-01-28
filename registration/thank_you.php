@@ -6,17 +6,22 @@
     <link rel="relstylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald:300">
     <title>Registration Form</title>
     <style >
-     html,body{
-      margin: 0;
-      padding: 0;
-      height:70%;
-
-    }
+     
    h1{
      font-family: Raleway;
-       font-weight: 300;
+     font-weight: 300;
      text-align: center;
-     margin-top: 20vw;
+	 margin-top:40vh;
+	 font-size: 34px;
+   }
+   @media(max-width:768px){
+	h1{
+     font-family: Raleway;
+     font-weight: 300;
+     text-align: center;
+	 margin-top:40vh;
+	 font-size: 24px;
+   }   
    }
     </style>
   </head>
