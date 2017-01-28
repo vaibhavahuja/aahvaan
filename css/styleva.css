@@ -448,6 +448,7 @@ body{
   margin-right: auto;
   margin-bottom: 20px;
   margin-top: -7vw;
+  letter-spacing:-0.6px;
 }
 
 @media(max-width:768px){
