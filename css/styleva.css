@@ -1,17 +1,62 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
 @import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
 @import url('https://fonts.googleapis.com/css?family=VT323');
+@import url('https://fonts.googleapis.com/css?family=Oswald:b');
 
 *{
   margin:0;
   padding:0;
 }
+body{
+ font-family:"Raleway",sans-serif;
+}
+
+.okokok{
+	text-align:left;
+	font-family:'Raleway';
+	font-size:16px;
+	width:900px;
+	max-width:100%;
+	margin:auto;
+}
+
+
+@media(max-width:768px){
+.okokok{
+	text-align:left;
+	font-family:'Raleway';
+	font-size:14px;
+	width:85%;
+	margin-left:0px;
+	margin:auto;
+}
+	
+	
+}
+
+
+
+
+
+/*This is temporarily commented */
+
 #categories{
   overflow:hidden;
   width:60vw;
   margin:0 auto;
-  
+
 }
+
+
+@media (max-width:768px){
+#categories{
+  overflow:hidden;
+  width:90vw;
+  margin:0 auto;
+}
+
+}
+
 
 #categories li{
   position:relative;
@@ -20,7 +65,7 @@
   padding-bottom: 32.16%;
   float:left;
   overflow:hidden;
-  visibility:hidden;  
+  visibility:hidden;
   transform: rotate(-60deg) skewY(30deg);
 }
 
@@ -47,9 +92,9 @@
   height:100%;
   text-align:center;
   color:#fff;
-  overflow:hidden;  
+  overflow:hidden;
   transform: skewY(-30deg) rotate(60deg);
-  
+
 }
 
 #categories li img{
@@ -57,7 +102,7 @@
   width: auto; height:100%;
   margin:0 auto;
   transition:cubic-bezier(.22,.8,.52,1) 0.09s;
-  
+
 }
 
 #categories li img:hover{
@@ -66,11 +111,16 @@
 	width:auto;
 	transition:cubic-bezier(.22,.8,.52,1) 0.18s;
 	cursor:pointer;
-	
+
 }
 
+
+
 .pla{
-	font-family:Raleway; font-weight:bold; font-size:2.5em; text-align:center; margin-top:45px; margin-bottom:25px;
+	font-family:Raleway; font-weight:bold; font-size:2em; text-align:center; margin-top:45px; margin-bottom:25px;
+}
+.pla2{
+	font-family:Raleway; font-weight:bold; font-size:2.0em; text-align:center; margin-top:45px; margin-bottom:25px;
 }
 
 .map{
@@ -99,16 +149,17 @@
 
 
 .white-popup {
+  font-size: 1.2vw;
   position: relative;
   background: #FFF;
   padding: 25px;
   width: auto;
   max-width: 900px;
   margin: 0 auto;
-  
+
 }
 
-/* 
+/*
 
 ====== Zoom effect ======
 
@@ -151,8 +202,21 @@
   padding-left:30vw;
   display:block;
   padding-top:50px;
-  
+
 }
+@media (max-width:900px){
+.socialcause{
+  overflow:hidden;
+  width:auto;
+  height:450px;
+  padding-left:15vw;
+  display:block;
+  padding-top:50px;
+
+}	
+}
+
+
 
 
 .heart {
@@ -169,18 +233,54 @@
   background-image:url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjE3M3B4IiBoZWlnaHQ9IjE1OHB4IiB2aWV3Qm94PSIwIDAgMTczIDE1OCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTczIDE1OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBmaWxsPSIjRUY0NjU3IiBkPSJNMTU3LjMzMSwxNS41MDRjLTE5LjU1OS0xOS41NTktNTEuMjcxLTE5LjU1OS03MC44MzEsMGMtMTkuNTU5LTE5LjU1OS01MS4yNzEtMTkuNTU5LTcwLjgzMSwwDQoJYy0xOS41NTksMTkuNTU5LTE5LjU1OSw1MS4yNzEsMCw3MC44MzFsNzAuODMxLDcwLjgzbDcwLjgzMS03MC44M0MxNzYuODksNjYuNzc1LDE3Ni44OSwzNS4wNjQsMTU3LjMzMSwxNS41MDR6Ii8+DQo8L3N2Zz4=");
 }
 
+@media (max-width:768px){
+.socialcause{
+  overflow:hidden;
+  width:auto;
+  height:450px;
+  padding-left:0;
+  display:block;
+  padding-top:50px;
+
+}
+
+.heart {
+  z-index: 0;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: 50%;
+  margin-top: -140px;
+  left: 50vw;
+  margin-left: -75px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image:url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjE3M3B4IiBoZWlnaHQ9IjE1OHB4IiB2aWV3Qm94PSIwIDAgMTczIDE1OCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTczIDE1OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBmaWxsPSIjRUY0NjU3IiBkPSJNMTU3LjMzMSwxNS41MDRjLTE5LjU1OS0xOS41NTktNTEuMjcxLTE5LjU1OS03MC44MzEsMGMtMTkuNTU5LTE5LjU1OS01MS4yNzEtMTkuNTU5LTcwLjgzMSwwDQoJYy0xOS41NTksMTkuNTU5LTE5LjU1OSw1MS4yNzEsMCw3MC44MzFsNzAuODMxLDcwLjgzbDcwLjgzMS03MC44M0MxNzYuODksNjYuNzc1LDE3Ni44OSwzNS4wNjQsMTU3LjMzMSwxNS41MDR6Ii8+DQo8L3N2Zz4=");
+}
+
+
+}
+
+
 .hometown {
   font-family:'Inconsolata', sans-serif;
   font-weight: bold;
-  font-size: 1.5em;  
+  font-size: 1.5em;
   overflow:hidden;
   position: relative;
   z-index: 100;
-  width: 512px;
+  width: 600px;
   height: 512px;
   color: black;
   margin-top:-30px;
-  
+
+}
+
+.soon {
+  font-family:'Raleway', sans-serif;
+  font-weight:300;
+    font-style: italic;
+    text-align:center; margin-top:45px; margin-bottom:25px;
 }
 
 
@@ -196,8 +296,20 @@
   position: absolute;
   width: 20px;
   left: 50%;
-  
-  
+}
+
+@media (max-width:768px){
+#top {
+  width: 200px;
+  margin: 0;
+  position: relative;
+  margin-top:-65px;
+  left:20vw;
+  display:none;
+}	
+	
+	
+	
 }
 .char1 {
 	transform: rotate(-36deg);
@@ -230,36 +342,51 @@
   height: 300px;
   padding-top: 45px;
   text-align: center;
-  font-size: 3.0em;
+  font-size: 2.5em;
   z-index: 0;
   position: absolute;
   top: 50%;
   margin-top: -165px;
-  text-shadow: 0.02em -0.02em 0.2em rgba(10,10,10,0.9);
+}
+
+
+@media(max-width:768px){
+.cause {
+  font-family:"Raleway";
+  display: inline-block;
+  width: 100vw;
+  height: 300px;
+  padding-top: 45px;
+  text-align: center;
+  font-size: 2em;
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -155px;
+}	
 }
 
 .mybutton{
 	height:45px;
 	width:180px;
 	z-index:1;
-	font-family:Raleway;
-	font-weight:700;
-	font-size:1.248vw;
+	font-size:20px;
 	border:none;
-	border-radius:5px;
+	border-radius:10px;
 	color:white;
-	background-color:#ef4657;
-	top:395px;
-	left:165px;
-	position:relative;
-	transition:0.3s linear;
+	background-color:black;
+	text-align:center;
+	font-weight:700;
+	padding-top:7.5px;
+
 }
 
 .mybutton:hover{
-	box-shadow: 4px 4px 10.5px #888888;
-	transition:0.2s linear;
+    box-shadow: 4px 4px 10.5px #888888;
+	cursor:pointer;
 
 }
+
 
 .heart {
   animation: HEARTBEAT 2.5s infinite;
@@ -308,9 +435,43 @@
     top: 110px;
   }
 }
+
+/*stuuff */
+.stuff{
+  width: 75vw;
+  height: auto;
+  text-align: justify;
+  font-family: "raleway",sans-serif;
+  font-weight: 400;
+  font-size: 23px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: -7vw;
+}
+
+@media(max-width:768px){
+.stuff{
+  width: 90vw;
+  height: auto;
+  text-align: justify;
+  font-family: "raleway",sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: -138px;
+}
+
+	
+	
+}
+
+
 /* other events */
 .otherevents{
-	height:400px;
+	height:800px;
 	width:auto;
 	margin-top:60px;
 	margin-left:auto;
@@ -321,16 +482,16 @@
 .color-list {
   margin-left:100px;
   margin-top:100px;
-  margin-right:100px;  
+  margin-right:100px;
   display: flex;
-  flex-direction: row;
-  height: 35vh;
+  flex-direction: column;
+  height: 40vh;
 }
 .otherbutton{
 	height:40px;
 	width:150px;
 	z-index:500;
-	font-family:Raleway;
+	font-family:"Oswald";
 	font-weight:700;
 	font-size:1em;
 	border:none;
@@ -348,21 +509,21 @@
 
   display: flex;
   flex-direction: column;
-  flex: 1 0 10em;  
-  box-shadow: 0 0 30px #424242;
+  flex: 1 0 10em;
+ /* box-shadow: 0 0 30px #424242;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   overflow: hidden;
   padding: 1em;
   color: white;
   transition: flex-basis 500ms ease-in-out;
-  transition: flex-basis 500ms ease-in-out, 
+  transition: flex-basis 500ms ease-in-out,
 }
 
 .color:hover {
- 
+
       flex-basis: 20em;
 }
 
@@ -373,9 +534,9 @@
 .name {
   font-size: 1.2em;
   font-weight: 700;
-  font-family:Raleway;
+  font-family:"Oswald";
   text-shadow: 0.02em -0.02em 0.2em rgba(10,10,10,0.9);
-  
+
 }
 
 .details {
@@ -399,91 +560,12 @@
 
 
 
-	
-	
 
 
 
-@media (max-width: 980px){
-#categories{
-  overflow:hidden;
-  width:75vw;
-  margin:0 auto; 
-}
 
 
-.socialcause{
-  overflow:hidden;
-  width:auto;
-  height:450px;
-  background: linear-gradient(to bottom, #ccc,white);  
-  padding-left:20vw;
-  padding-top:50px;
-  display:block;
-  margin-top:0;
-  
-}
 
-.socialcause .mybutton{
-	height:45px;
-	width:180px;
-	z-index:1;
-	font-family:Raleway;
-	font-weight:700;
-	font-size:2.1vw;
-	border:none;
-	border-radius:5px;
-	color:white;
-	background-color:#ef4657;
-	top:395px;
-	left:165px;
-	position:relative;
-	transition:0.3s linear;
-}	
-
-}
-
-
-@media(max-width: 750px){
-	#categories{
-  overflow:hidden;
-  width:85vw;
-  margin:0 auto; 
-}
-	
-.socialcause{
-  overflow:hidden;
-  width:auto;
-  height:450px;
-  background: linear-gradient(to bottom, #ccc,white);  
-  padding-top:50px;
-  padding-left:0.9px;
-  display:block;
-  margin-top:0;
-  margin-left:-50px;
-}
-	
-
-.color-list {
-  margin-left:40px;
-  margin-top:40px;
-  margin-right:40px;
-  margin-bottom:200px;  
-  display: flex;
-  flex-direction: column;
-  height: 10vh;
-}
-.otherevents{
-	height:780px;
-	width:auto;
-	margin-top:60px;
-	margin-left:auto;
-	margin-right:auto;
-	margin-bottom:50px;
-}
-
-	
-}
 
 
 /* speakers */
@@ -507,7 +589,7 @@
 	overflow:hidden;
 	transition:0.1s linear;
 
-	
+
 }
 
 .names:hover{
@@ -588,10 +670,35 @@
 
 /* sponsors */
 
+.sponsorss{
+	overflow:hidden;
+	width:90%;
+	margin:auto;
+
+}
+
+
+.sponsorss img{
+	width:100%;
+	height: inherit;
+	display:block;
+	margin: inherit;
+}
+
+
+/* sponsors being used rn */
 .sponsors{
 	overflow:hidden;
-	width:50%;
+	width:60%;
 	margin:auto;
+}
+
+@media(max-width:768px){
+.sponsors{
+	overflow:hidden;
+	width:95%;
+	margin:auto;
+}
 	
 }
 
@@ -599,6 +706,79 @@
 .sponsors img{
 	width:100%;
 	height:auto;
-	display:block;
+	display:inline;
 	margin:auto;
 }
+/*
+.media{
+    height:400px;
+    float:left;
+	overflow:hidden;
+	width:45%;
+	margin:left;
+margin-left: 10px;
+
+}
+
+
+.media img{
+    
+    margin-left: 165px;
+    float:left;
+	width:50%;
+	height:auto;
+	display:block;
+	margin:left;
+margin-bottom: 300px;
+}
+.media2{
+    margin-top:12px;
+    height:400px;
+    float:right;
+	overflow:hidden;
+	width:45%;
+	margin:right;
+margin-right: 10px;
+
+}
+.cont{
+	overflow:hidden;
+	width:100%;
+	
+
+}
+
+.media2 img{
+    margin-bottom: 300px;
+    margin-right: 265px;
+	float:right;
+    width:20%;
+	height:auto;
+	display:block;
+	margin:right;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

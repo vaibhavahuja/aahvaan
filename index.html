@@ -134,12 +134,12 @@
 
 <script src="js/counter.js"></script>
 <script src="js/main.js"></script>
-		
+
 <!-- scripts for popup -->
 <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css'>
 
 
- 
+
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -159,12 +159,12 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
 	        <li><a href="#sportspage">Sports</a></li>
-			<li><a href="#otherevents">Other Events</a></li>
-	        <li><a href="#contact">Reach Out</a></li>
+			<li><a href="#ourcause">Social Cause</a></li>
+	        <li><a href="#contact"> Reach Out</a></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#" style="margin:0px 0px;height:20px;vertical-align:middle;position:relative;top:-5px;"><img src="images/fb.png"></a></li>
-	        <li><a href="#" style="margin:0px 0px;height:20px;position:relative;top:-5px;"><img src="images/tw.png"></a></li>
+	        <!--<li><a href="#" style="margin:0px 0px;height:20px;vertical-align:middle;position:relative;top:-5px;"><img src="images/fb.png"></a></li>
+	        <li><a href="#" style="margin:0px 0px;height:20px;position:relative;top:-5px;"><img src="images/tw.png"></a></li> -->
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -187,25 +187,45 @@
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
 		        <li><a href="#sportspage">Sports</a></li>
-				<li><a href="#otherevents">Other Events</a></li>
+				<li><a href="#ourcause">Social Cause</a></li>
 		        <li><a href="#contact">Reach Out</a></li>
 		      </ul>
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#" style="margin-right:0px;"><img src="images/fb.png"></a></li>
-		        <li><a href="#" style="margin-left:0px;"><img src="images/tw.png"></a></li>
+		      <!--  <li><a href="#" style="margin-right:0px;"><img src="images/fb.png"></a></li>
+		        <li><a href="#" style="margin-left:0px;"><img src="images/tw.png"></a></li> -->
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
 		<div class="header_content">
 				<center>
-				<h1>Aahvaan begins in</h1>
+				<h1></h1>
 				<div id="countdown" style="font-size:2em; color:#ffc800;font-family:'Raleway';"></div>
 				</center>
 
 		</div>
 		<canvas id="canvas-1" style="width:100%;height:50vh;position:absolute;bottom:0px;"></canvas>
 	</header>
+
+	<script>
+	var bgArr = ["images/1.jpg", "images/2.jpg", "images/3.jpg","images/4.jpg","images/5.jpg","images/6.jpg","images/7.jpg" ];
+         var i=0;
+
+// Start the slide show
+        var interval = self.setInterval("swapBkgnd()", 3000)
+
+       function swapBkgnd() {
+        if (i>(bgArr.length-1) ) {
+        i=0
+        $("header").css("background-image", "url("+bgArr[i]+")");
+        }
+        else {
+        $("header").css("background-image", "url("+bgArr[i]+")");
+        }
+        i++;
+};
+</script>
+
 	<script>
     jQuery.noConflict();
     (function ($) {
@@ -213,26 +233,32 @@
             jQuery('.okokok').scrollFadeOut(300,500);
         }
 
-        $(document).ready(readyFn); 
+        $(document).ready(readyFn);
     })(jQuery);
 </script>
-	<div style="background-color:#ffc800;color:#000;padding-bottom:50px;padding-top:50px;"><p class="okokok" style="text-align:center;font-family:'Raleway';font-size:1.2em;width:700px;max-width:90%;margin:auto;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br><b style="font-size:1.2em;">Team Aahvaan</b></p></div>
-	<img src="images/save.png" style="width:100%">	
+	<div style="background-color:#ffc800;color:#000;padding-bottom:50px;padding-top:10px;">
+
+<p class="okokok">
+    <br><br><b style="font-size:2em;">Aahvaan</b>
+<i style="font-size:1.4em;">(n.)</i> <br>1. A call to revolution.
+<br>2. Delhi Technological University's Annual Sports Fest from <b>23rd - 26th March '17</b>
+    
+<br>3. Four days of exhilarating fun but you don't have to trust us: Come and witness it all! 
+<br><br><i style="font-size:1.0em;">(verb)</i>
+<br>4. Coming soon!    
+    
+	</p></div>
+	<img src="images/save.png" style="width:100%">
 
 
 
 <a name="sportspage"></a>
 
 
-	<h1 class="pla" style="margin-bottom:60px;"> SPORTS </h1>		
+	<h1 class="pla" style="margin-bottom:60px;"> SPORTS </h1>
 
-	
-	
+
+
 
 <script>
     jQuery.noConflict();
@@ -241,17 +267,17 @@
             jQuery('.random').scrollFadeIn(300,300);
         }
 
-        $(document).ready(readyFn); 
+        $(document).ready(readyFn);
     })(jQuery);
 </script>
 
 
 
-	<ul id="categories" class="random">
+<ul id="categories" class="random">
   <li class="pusher"></li>
 	<li>
       <div>
-        <img src="sports/tennis.png" href="#tennis" data-effect="mfp-zoom-in">
+        <img src="sports/chess.png" href="#chess" data-effect="mfp-zoom-in">
 		</img>
         
     </div>
@@ -266,7 +292,7 @@
   <li>
       <div>
         <img src="sports/athletics.png" href="#athletics" data-effect="mfp-zoom-in">
-			
+
 		</img>
         
     </div>
@@ -291,7 +317,7 @@
   
   <li>
       <div>
-        <img src="sports/football.png" href="#football" data-effect="mfp-zoom-in">
+        <img src="sports/register.png" onclick="window.open('./registration/register.php','_blank');">
 		
 		</img>
         
@@ -308,7 +334,7 @@
   </li>
   <li>
       <div>
-        <img src="sports/plift.png" href="#plift" data-effect="mfp-zoom-in">
+        <img src="sports/football.png" href="#football" data-effect="mfp-zoom-in">
 		
 		</img>
         
@@ -335,13 +361,28 @@
         <img src="sports/volleyball.png" class="okok" href="#volleyball" data-effect="mfp-zoom-in">
 		
 		</img>
+
 		
       </div>
+	 
   </li>
-  
+ 
+   <li>
+      <div>
+        <img src="sports/tennis.png" class="okok" href="#tennis" data-effect="mfp-zoom-in">
+		
+		</img>
+
+		
+      </div>
+	 
+  </li>
  </ul>
  
- <h1 class="pla"> SPORTS TALK </h1>
+
+
+
+<!-- <h1 class="pla"> SPORTS TALK </h1>
  <div class="speakers">
 <div class="names" style="background-image:url('sports/dipa.jpg'); background-size: cover;">
 <div class="nam"> DIPA KARMAKAR </div>
@@ -367,21 +408,36 @@
 
 </div>
 
+
+
+
+
+ -->
+ <br><br><br><br>
  
- 
- 
- 
- 
- 
- 
- 
- 
+<a name="ourcause"></a>
+<div class="socialcause">
+<div class="hometown">
+    <div class="heart"> </div>
+    <div id="top">AAHVAAN</div>
+    <div class="cause">#pointingNE</div>
+</div>
+</div>
+
+
+<div class="stuff">
+	The North Eastern states of India are linked to the seventh largest landmass by a tiny strip of land. When the country was made theirs, they were promised. But today, more mentally than geographically, we have made them foreign, seperate and unworthy of opportunity.
+	Perhaps AAHVAAN doesn't want to bring about a revolution. Perhaps we just want you to pause. And notice the silence in the North East.
+</div>
+
+
+<!--
  <div class="otherevents">
  <a name="otherevents"></a>
- 
+
  <h1 class="pla"> OTHER EVENTS </h1>
- 
- <div class="color-list"> 
+
+ <div class="color-list">
   <section class="color" style="background-image:url('sports/footsoul.jpg');">
     <h2 class="name">FOOTSOUL</h2>
     <ul class="details">
@@ -391,13 +447,13 @@
   </section>
 
   <section class="color" style="background-image:url('sports/marathon.jpg');">
-    <h2 class="name">MARATHON</h2>	
-    <ul class="details">	  
+    <h2 class="name">MARATHON</h2>
+    <ul class="details">
 	  <li> add something related to event </li>
       <li><button class="otherbutton">Know More</button></li>
     </ul>
   </section>
-  
+
   <section class="color"style="background-image:url('sports/chess.jpg');">
     <h2 class="name">CHESS</h2>
     <ul class="details">
@@ -414,21 +470,10 @@
   </section>
 </div>
 </div>
+-->
 
 
-<div class="socialcause">
-<div class="hometown">
-    <div class="heart"> </div>
-    <div id="top">AAHVAAN</div>
-    <div class="cause">#pointingNE</div>
-	<button class="mybutton"> KNOW MORE </button>
-</div>
-</div>
-
-
-
-
-
+<!--
 <h1 class="pla"> EVENT NIGHTS </h1>
 <div class="livenight" style="background-image:url('sports/local-train.jpg'); margin-top:40px;">
 <img src="sports/tlt.png" class="tlt">
@@ -439,20 +484,75 @@ add text ehreadd text ehreadd text ehreadd text ehreadd text ehreadd text ehread
 <div class="livenight" style="background-image:url('sports/nizami.jpg')">
 <img src="sports/nizamibandhu.png" class="tlt">
 </div>
- 
- <div class="sponsors">
- <h1 class="pla"> OUR SPONSORS </h1>
- <img src="sports/sponsors.jpg"></img>
- 
- 
- </div>
- 
- 
- 
- 
-<a name="contact"></a>
-<h1 class="pla"> CONTACT US </h1>
+-->
+ <div class="sponsorss">
+ <h1 class="pla"> WHAT'S IN STORE </h1>
 
+<h3 class="soon">(coming soon)</h3>
+ <img src="Nights/all.jpg"></img>
+
+
+ </div>
+<br>
+<br>
+
+
+<h1 class="pla"> OUR SPONSORS </h1>
+
+
+<div class="sponsors">
+<img src="sports/sponsors.jpg"></img><br>
+<img src="sports/sponsors2.jpg"></img>
+</div>
+
+
+<!--
+<div class="media">
+<div class="container-fluid">
+   <div class="row">
+    <div class="col-xs-6" >
+     <h1 class="pla">SOCIAL MOVEMENT PARTNER </h1>
+    </div>
+    <div class="col-xs-6">
+      <h1 class="pla" style="font-size:20px;">MEDIA COVERAGE PARTNER</h1>
+	  </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-xs-6">
+      <img src="sports/sas.png" class="img-responsive" style="margin:auto; display:block;" ></img>
+    </div>
+    <div class="col-xs-6">
+      <img src="sports/sa2.jpg" class="img-responsive" style="margin:auto; display:block;" ></img>
+	  </div>
+  </div>
+</div>
+     
+ <!--  
+ <h1 class="pla2"> SOCIAL MOVEMENT PARTNER </h1>
+ 
+<br><br><br><img src="sports/sas.png"></img>
+    
+
+ </div>
+<div  class="media2">
+
+ <h1 class="pla2"> MEDIA COVERAGE PARTNER </h1>
+<br><br><br><img src="sports/sa2.jpg"></img>
+
+    
+
+ </div>
+
+
+-->
+<a name="contact"></a>
+<div class="cont">
+    
+    <h1 class="pla"> CONTACT US </h1>
+</div>
 
 <div id="map">
 
@@ -460,99 +560,443 @@ add text ehreadd text ehreadd text ehreadd text ehreadd text ehreadd text ehread
 </div>
 
 <footer id="footer">
-<p style="font-family:Raleway;font-size:1em;text-align:center;color:white;">email@aahvan.com</p>
+<p style="font-family:Raleway;font-size:1em;text-align:center;color:white;">dtusportscouncil@dtu.ac.in</p>
 <div class="line"></div>
-<a href="#"><img src="images/fb.png"></a>
-<a href="#"><img src="images/tw.png"></a>
+    <div class = "lol"><a  href="https://www.facebook.com/aahvaandtu/" target="_blank"><img src="images/fb.png"></a>
+</div>
+<!--<a href="#"><img src="images/tw.png"></a> -->
 
-</footer>  
- 
-	
+</footer>
+
+
 </body>
 
 <!-- Popup > add the rules here according to the sport written in id-->
-<div id="chess" class="white-popup mfp-with-anim mfp-hide"  style="display:none;">
-<h1>put rules here</h1>.
-put the rules fput the rules for chess here.put the rules for chess here.or chess here.put the rules for chess here.<br>
-put the rules for chess here.put the rules for chess here.<br>
-put the rules for chess here.put the rules for chess here.<br>
-put the rules for chess here.put the rules for chess here.<br>
-put the rules for chess here.put the rules for chess here.<br>
-put the rules for chess here.put the rules for chess here.<br>
-put the rules for chess here.put the rules for chess here.<br>
-put the rules for chess here.put the rules for chess here.<br>
-put the rules for chess here.put the rules for chess here.<br>
-put the rules for chess here.put the rules for chess here.<br>
+<div id="chess" class="white-popup mfp-with-anim mfp-hide"  >
+	<p>
+ <h1>Rules:</h1>
+        
+    
+ <li>   All FIDE Rules apply as on 1st Jan 2017 unless otherwise mentioned. </li>
+ <li>   The basic pairing system shall be Controlled Swiss System Pairings using Match Points for
+both Pairing and Scoring. </li>
+
+    <li>   Time control: 25 minutes plus an additional 10 second increment per move.</li>
+ <li>Number of rounds will be decided depending on the number of participating teams. </li>
+ <li>Chess clocks shall be provided to top boards in cases on shortage of clocks. Participants can use their own chess clocks for the matches. </li>
+ <li>  A team must consist of a maximum of 5 players, with 4 players playing in the
+tournament and one player playing as a substitute. </li>
+ <li> There shall be no restriction to including women players in the Chess Team. <li>
+ <li> Each team must clearly state the playing order of its team while sending the entry. If
+the team wishes to play their substitute in a particular round, the Team Captain should
+intimate this to the Chief Arbiter before the round begins. Rules for substitution have
+been explained below in detail. </li>
+<li> Each team is required to play through the entire tournament. Teams which do not play
+two rounds in succession shall be automatically disqualified and their name shall be
+struck off from the pairing list. </li>
+<li>Each team shall be awarded 1 point for a win, 0.5 points for a 2-2 draw and 0 points in
+case of a loss. In case of the same number of points of two winning teams, the winner
+shall be adjudged according to FIDE guidelines.</li>
+<li>The final positions of the teams shall be established by the number of game points
+scored by each team.</li>
+<li>Only one participating team is permitted from a single college. The host college shall
+have 2 participating teams in the tournament.</li>
+    <li>In case of any dispute, the decision of the Chief Arbiter shall be considered final and
+binding.</li>
+<h2>Rules for substitution:</h2>
+ <li> "Roll over substitution" </li>
+ <li>The boards lower to the board on which substitution is made will slide up one board till
+the board of substitution.
+Example 1: Assume the following board order- A-1, B-2, C-3, D-4. Substitute player E. In
+case, the player A (on board 1) is to be substituted, the new board order should be B-1,
+C-2, D-3, E-4 (Non- playing A).
+Example 2: Assume following board order- A-1, B-2, C-3, D-4. Substitute player E. In case
+the player C (on board 3) is to be substituted, the new board order should be A-1 B-2, D-
+3, E-4 (Non playing-C).
+No player shall be replaced after the team has been registered. </li>
+ 
+ </ol>
+
+</p>
+
+<h2>ENTRY FEES:</h2>Entry fee for each team is 1000 INR.
+<h2>CASH PRIZES:</h2>
+<li>	Winning team will be awarded 7000 INR. </li>
+<li>	Runners up will be awarded 5000 INR. </li>
+<li>	2nd Runners up will be awarded 3000 INR.</li>
+
+<h3>NITIN LOHCHAB (CHESS OLYMPIAD): 7827916709, 7015666409 </h3>
+<h3>SHASHWAT KISHORE (CHESS OLYMPIAD): 9899897555 </h3>
+
+<div class="mybutton" onclick="window.open('./registration/register.php','_blank');"> REGISTER </div>
 </div>
 
 <div id="basketball" class="white-popup mfp-with-anim mfp-hide">
 
-<h1> put rules here </h1>
+	<h1>BOYS:</h1>
+	<li> The maximum team limit is 12 players. </li>
+	<li> The game shall consist of 4 quarters of 10 minutes each and 4 time outs: 2 time outs in each half. </li>
+	<li> If there is a tie at the end of a game, a match of 5 minutes will be played. This will go on until one team outruns the other. </li>
+	<li> Concerning the game-play, all standard FIBA rules will be followed. </li>
+	
 
+<h2>GIRLS:</h2>
+<li> The maximum team limit is 12 players. </li>
+<li> The game shall consist of 4 quarters of 8 minutes each and 4 time outs: 2 time outs in each half. </li>
+<li> If there is a tie at the end of a game, a match of 5 minutes will be played. This will go on until one team outruns the other. </li>
+<li> Concerning the game-play, all standard FIBA rules will be followed. </li>
+
+
+<h2>ENTRY FEES:</h2> Entry fee for each team is 1200 INR.
+<h2>CASH PRIZES:</h2>
+<li>	Winning team will be awarded 10000 INR. </li>
+<li>	Runners up will be awarded 5000 INR. </li>
+
+
+
+<h3>AAYUSH SWASTIK (BASKETBALL M): 8130034416 </h3>
+<h3>APOORVA SHARMA (BASKETBALL W): 7838498393 </h3>
+
+<div class="mybutton" onclick="window.open('./registration/register.php','_blank');"> REGISTER </div>
 
 </div>
 
 <div id="athletics" class="white-popup mfp-with-anim mfp-hide">
 
-<h1> put rules here </h1>
+<h1>	GIRLS </h1>
+	      <li>  Track Events: 100m, 200m, 400m, 800m, 1500m, 3000m, 5000m, 4*100m Relay, 4*400m Relay </li>
+	      <li>  Field Events: Long Jump, Shot Put, Discus throw. </li>
 
+<h1>	BOYS </h1>
+
+	      <li>  Track Events: 100m, 200m, 400m, 800m, 1500m, 3000m, 5000m, 4*100m Relay, 4*400m Relay </li>
+	      <li>  Field Events: Long Jump, Shot Put, Discus throw,, Triple Jump </li>
+
+<h1>	Common: </h1>  Mixed relay 4*100m (2Boys+2Girls) and Mixed relay 4*400m (2Boys+2Girls)
+
+<h1>	Rules :  </h1>
+      <ol>
+
+	        
+            <li>For field event, 3 trials. Best 8 to be chosen from then, and these 8 will get 3 more trials. Best from the 6 trials will be taken into consideration.</li>
+	        <li> Heats will be conducted only for the 100m race, based on which participants will be selected to compete in the final race. </li>
+	        <li> All other races will be time trails i.e., the final standings will be based on the best timings, irrespective of the position in the heats. The participants will be timed and the results will be decided accordingly. </li>
+	        <li> For all the races, only one foul start overall will be considered. Any athlete committing a second foul start will be disqualified. </li>
+	        <li> A maximum of 3 participants from each college in any particular event for boys and a maximum of 2 participants from each college for girls in one event is allowed (excluding relays, which require 4 per college team). </li>
+	        <li> An invidual can participate in a maximum of 3 invidual events excluding relays. An event may stand cancelled in case of insufficient participation.</li>
+	        <li> In any case of conflict, the referees’ decision will be taken as final. </li>
+</ol>
+<h2>ENTRY FEES:</h2>
+ Entry fee for each player per event is 100 INR.
+<h2>CASH PRIZES:</h2>
+	For individual event:
+
+<li>	Winning prize for Gold is 800 INR. </li>
+<li>	Winning prize for Silver is 400 INR. </li>
+
+For relay:
+
+<li>	Winning prize for Gold is 2000 INR. </li>
+<li>	Winning prize for Silver is 800 INR. </li>
+
+
+<h3>SARTAJ SINGH (ATHLETICS M): 7042278089 </h3>
+<h3>NAMRATA VARSHNEY (ATHLETICS W): 9818561987</h3>
+
+<div class="mybutton" onclick="window.open('./registration/register.php','_blank');"> REGISTER </div>
 
 </div>
 
 <div id="badminton" class="white-popup mfp-with-anim mfp-hide">
 
-<h1> put rules here </h1>
+<h1> BOYS </h1>
+<ol>
+	<li>Format of Match: Best of 5 games(in the order)- singles, singles,doubles, singles, doubles.</li>
+	<li>Each game will have best of 3 sets(21 points each).</li>
+	<li>Team line-up for every match must be submitted before the match.
+   No requests to change the line up would be accepted after the submission of the list.
+</li>
+	<li> Latest BWF rules will be followed for every game.</li>
+	<li>A team minimum of 5 players and maximum 6 players is required to register.</li>
+	<li>Maximum of two players can play in two games(one singles and one doubles).</li>
+	<li>In case of any discrepancy or conflict, the decision of the organisers/officials shall be final.</li>
+</ol>
+<h2>ENTRY FEES:</h2>Entry fee for each team is 900 INR.
+<h2>CASH PRIZES:</h2>
+<li>	Winning team will be awarded 7500 INR. </li>
+<li>	Runners up will be awarded 3500 INR. </li>
 
+ <h1> GIRLS </h1>
+ <ol>
+	 <li>Format of Match: Best of 3 games(in the order)- singles,doubles, singles .</li>
+ 	<li>Each game will have best of 3 sets(21 points each).</li>
+ 	<li>Team line-up for every match must be submitted before the match.
+    No requests to change the line up would be accepted after the submission of the list.
+ </li>
+ 	<li> Latest BWF rules will be followed for every game.</li>
+ 	<li>A team minimum of 3 players and maximum 4 players is required to register.</li>
+ 	<li>Only one player is allowed to play in two games(one singles and one doubles).</li>
+ 	<li>In case of any discrepancy or conflict, the decision of the organisers/officials shall be final.</li>
+ </ol>
+ <h2>ENTRY FEES:</h2>Entry fee for each team is 600 INR.
+ <h2>CASH PRIZES:</h2>
+ <li>	Winning team will be awarded 5000 INR. </li>
+ <li>	Runners up will be awarded 2000 INR. </li>
+
+
+ <h3>PUNEET VALECHA (BADMINTON M): 8860994691 </h3>
+ <h3>CHHAVI (BADMINTON W): 9873371087 </h3>
+<div class="mybutton" onclick="window.open('./registration/register.php','_blank');"> REGISTER </div>
 
 </div>
+
 <div id="cricket" class="white-popup mfp-with-anim mfp-hide">
 
-<h1> put rules here </h1>
+	<h1>RULES: </h1>
 
+	<li>	Matches shall be played according to the ICC rules in force, as adopted from time to time by the Board of Control for Cricket in India, unless otherwise modified. </li>
+	<li>	All the matches shall be conducted on knock out basis and each side is allowed to complete 20 overs unless the opposing team is dismissed earlier. Each bowler can bowl a maximum of 4 overs. The semi-finals and final also will be of 20 overs.</li>
+	<li>	The bowling team will be given 85 minutes to complete its quota of 20 overs. The penalty for every short over will be decided by all the umpires prior to the meet.</li>
+	<li>	No spike shoes will be allowed to use by the players.</li>
+	<li>	If there is a tie, SUPER OVER will be played.</li>
+	<li>	The umpires are empowered to rearrange the number of overs by each side in the event of a delayed start or if play is suspended. The number of overs for the team batting second will not be reduced if the team batting first has been dismissed in fewer than agreed number of overs.</li>
+	<li>	Each team shall submit a list of players with their COLLEGE IDs not exceeding sixteen who may participate in the tournament. Not more than 16 certificates shall be awarded to a team. Failing to provide legitimate IDs will not allow that player to participate.</li>
+	<li>	In case, if any team is found playing player who doesn’t belong to that particular college, that team will be banned from the tournament with immediate effect and no PRIZE will be awarded in any case.</li>
+
+	Other important points:
+	<li>	In case of heavy rain, decision taken by umpires will be considered as final. </li>
+	<li>	In case of any discrepancy during finals or semi-finals, winner will be decided on the basis of point tally of league matches STRICTLY. </li>
+	<li>	Teams need to report to the ground 15 minutes before the scheduled start time.</li>
+	<li>	Walkover will be given to a team if the opponent team is not able to reach the ground within 15 minutes of the scheduled time.</li>
+	<li>	No team shall argue with umpires in any case. It could lead to cancellation of team registration and no refunds will be given. It could also attract proper disciplinary actions against the team.</li>
+
+	<h2> ENTRY FEES: Entry fee for each team is 4000 INR. </h2>
+	<h2>CASH PRIZES: </h2>
+	<ol>
+	<li>	Winning Team will be awarded 25,000 INR. </li>
+	<li>	Runners up will be awarded 15,000 INR. </li>
+
+	<li>	Man of The Series will be awarded4,000 INR. </li>
+	<li>	Best Bowler and Best Batsman will be awarded2,000 INR each. </li>
+</ol>
+	<h3>HARSH VIKRAM (CRICKET): 9891671291 </h3>
+	<h3>VAIBHAV GAUHANIA (CRICKET): 9811699417 </h3>
+
+
+<div class="mybutton" onclick="window.open('./registration/register.php','_blank');"> REGISTER </div>
 
 </div>
 <div id="football" class="white-popup mfp-with-anim mfp-hide">
 
-<h1> put rules here </h1>
+<h1> MEN </h1>
+<ol>
+<li> Matches shall be played according to the rules of FIFA as adopted from time to time by
+the All India Football Federation unless otherwise modified.</li>
+<li> Every team shall submit a list of players, not exceeding 16, who may participate in the
+tournament. Not more than 16 certificates shall be awarded to a team. </li>
+<li> The duration of each match shall be 50 minutes (25-5-25). During the league stage, after
+the expiry of play-time, if the tie still persists, the points shall be shared equally.</li>
+<li>In the event of a draw at the end of a knock out game, two periods of extra time (10
+minutes each, with 2 minutes break) will be included. There will be penalty shootout if
+the tie still persists.</li>
+<li>A team will be awarded 3 points for a win, 1 for draw, and zero points for a lost match.</li>
+<li>In case of tie, goal differences (i.e. Goals FOR minus Goals AGAINST) of all the matches
+played by the team shall be considered. If the tie still persists, the number of goals ‘FOR’
+throughout the tournament shall be considered. If tie still persists, a coin toss will be
+done.</li>
+    <li>Three substitutions per match will be allowed.</li>
+</ol>
 
+<h2>ENTRY FEES:</h2>Entry fee for each team is 1900 INR.
+<h2>CASH PRIZES:</h2>
+<li>	Winning team will be awarded 15000 INR. </li>
+<li>	Runners up will be awarded 8000 INR. </li>
+
+<h1>WOMEN</h1>
+<ol>
+	<li> Every team shall submit a list of players, not exceeding 12, who may participate in the
+tournament. Not more than 12 certificates shall be awarded to a team.</li>
+ <li>Matches will be played with teams having 7 players each.  </li>
+<li> The duration of each match shall be 30 minutes (15-5-15). During the league stage, if
+there is a tie, the points shall be shared equally.</li>
+ <li>In the event of a draw at the end of a knock out game, there will be a penalty shootout
+(no extra time). </li>
+<li>A team will be awarded 3 points for a win, 1 for draw, and zero points for a lost match. </li>
+ <li>In case of tie, goal differences (i.e. Goals FOR minus Goals AGAINST) of all the matches
+played by the team shall be considered. If the tie still persists, the number of goals ‘FOR’
+throughout the tournament shall be considered. If tie still persists, a coin toss will be
+done.</li>
+ <li>Rolling substitution will be allowed during the match.</li>
+ <li>Offside rule will not be considered during the match. </li>
+<li>When the ball goes out of play, the ball will be kicked in to start the play. Throw in shall
+not be allowed. </li>
+<li>There will be a minimum distance of 5 yards between opponent and the ball while
+starting the play from still ball. Eg. When there is a foul, kick in, free kick, etc.</li>
+<li>All other basic rules of FIFA will be followed during the match.</li>
+
+</ol>
+<p><b>Note:<b> organising committee has right to make small changes to rules, and notifying  the effected teams, if the need be. <p>
+	<h2>ENTRY FEES:</h2>Entry fee for each team is 1000 INR.
+  <h2>CASH PRIZES:</h2>
+  <li>	Winning team will be awarded 7000 INR. </li>
+  <li>	Runners up will be awarded 3000 INR. </li>
+
+	<h3>YOGESH SINGH (FOOTBALL M): 9650071614 </h3>
+ <h3>BHAWANA BAGRI (FOOTBALL W): 8826985531 </h3>
+
+<div class="mybutton" onclick="window.open('./registration/register.php','_blank');"> REGISTER </div>
 
 </div>
+
 <div id="kabaddi" class="white-popup mfp-with-anim mfp-hide">
 
-<h1> put rules here </h1>
+<h1> Rules</h1>
+<li>The tournament shall be conducted under the International Kabaddi Federation rules as
+adopted by the Amateur Kabaddi Federation of India, unless otherwise modified.</li>
+    <li>Every team shall submit a list of players, not exceeding 12, who may participate in the
+tournament. Not more than 12 certificates shall be awarded to a team.</li>
+    <li>No team shall argue with referees in any case. It could lead to cancellation of team
+registration and no refunds will be given. It could also attract proper disciplinary actions
+against the team.</li>
+<h2>Entry Fees</h1>
+    
+<li>Entry fee for each team is 1000 INR.</li>
 
+<h2>Cash Prizes:</h3>
+<li>Winning team will be awarded 11000 INR.</li>
+    <li>Runners up will be awarded 5000 INR.</li>
+
+<h2>Contact</h1>
+<li>SACHIN MAAN: 7503550912</li>
+<li>PRASHANT CHAUDHARY: 8585967926</li>
+<div class="mybutton" onclick="window.open('./registration/register.php','_blank');"> REGISTER </div>
 
 </div>
+
 <div id="plift" class="white-popup mfp-with-anim mfp-hide">
 
 <h1> put rules here </h1>
 
 
 </div>
+
 <div id="tennis" class="white-popup mfp-with-anim mfp-hide">
 
-<h1> put rules here </h1>
+	<h1>BOYS </h1>
+	<ol>
+<li>	Each team should have minimum 3 and maximum 4 players.</li>
+<li>	Each match will have two singles and one doubles match. The reverse singles will only be played to break the tie (in case one team wins the singles and the other team wins the dou les). </li>
+	<li>Only one player is allowed to play both singles and doubles matches. </li>
+<li>First stage will be pool stage where the number of pools and the number of teams in them will be decided on the basis of the number of participating teams.</li>
+<li>	The pool stage matches will be best of 17 games each. </li>
+<li>	The semis and finals will be best of 3 sets each.  </li>
+</ol>
 
+<h2>ENTRY FEES:</h2>Entry fee for each team is 600 INR.
+<h2>CASH PRIZES:</h2>
+<li>	Winning team will be awarded 5000 INR. </li>
+<li>	Runners up will be awarded 2000 INR. </li>
+
+<h1>	GIRLS </h1>
+<ol>
+	<li>   Each team should have minimum 2 and maximum 4 players.</li>
+	<li>   The format of the match will include one singles round then one doubles round (Best of three short sets (each short set comprises of 7 games) for the initial rounds). In case of a draw, there will be a singles tie-breaker of 11 points. </li>
+  <li>   The doubles match may be played by any two players from the team. </li>
+	
+	<li>  The finals will be best of 3 sets each. </li>
+</ol>
+
+<h2>ENTRY FEES:</h2>Entry fee for each team is 500 INR.
+<h2>CASH PRIZES:</h2>
+<li>	Winning team will be awarded 4000 INR. </li>
+<li>	Runners up will be awarded 1500 INR. </li>
+
+<h3>SIDDHARTHA (TENNIS M): 9958668692 </h3>
+<h3>POORVA SHRIVASTAVA (TENNIS W): 9650137260 </h3>
+
+<div class="mybutton" onclick="window.open('./registration/register.php','_blank');"> REGISTER </div>
 
 </div>
+
 <div id="tabletennis" class="white-popup mfp-with-anim mfp-hide">
 
-<h1> put rules here </h1>
+<h1> BOYS </h1>
 
+        <li>  Format of Play : singles (A vs X), singles (B vs Y), doubles (C vs Z) and  reverse singles (A vs Y & B vs X). </li>
+
+        <li>  A maximum of 4 players and a minimum of 3 players are allowed in a team. </li>
+
+				<h2>ENTRY FEES:</h2>Entry fee for each team is 600 INR.
+				<h2>CASH PRIZES:</h2>
+				<li>	Winning team will be awarded 5000 INR. </li>
+				<li>	Runners up will be awarded 2000 INR. </li>
+
+<h1> GIRLS </h1>
+
+<li>  Format of Play : singles (A vs X), singles (B vs Y), doubles (C vs Z) and  reverse singles (A vs Y & B vs X). </li>
+
+<li>  A maximum of 4 players and a minimum of 3 players are allowed in a team. </li>
+<h2>ENTRY FEES:</h2>Entry fee for each team is 600 INR.
+<h2>CASH PRIZES:</h2>
+<li>	Winning team will be awarded 5000 INR. </li>
+<li>	Runners up will be awarded 2000 INR. </li>
+
+
+<h3>SHUBHAM BAJAJ (TABLE TENNIS M): 9999934266 </h3>
+<h3>ANKITA ARORA (TABLE TENNIS W): 9968892928 </h3>
+
+<div class="mybutton" onclick="window.open('./registration/register.php','_blank');"> REGISTER </div>
 
 </div>
 <div id="volleyball" class="white-popup mfp-with-anim mfp-hide">
 
-<h1> put rules here </h1>
+<h1>	BOYS </h1>
+
+	          <li> Concerning the game-play, all standard FIVB rules will be followed. </li>
+	        <li>   Teams should report to the court half an hour before their match.</li>
+	          <li> All the players will be required to show their ID cards before the beginning of the match failing which the defaulting inpidual will not be allowed to play.</li>
+	          <li> "Rotation" rule will be followed during all the matches unless both the teams agree to play "fixed". </li>
+	        <li>   All league matches will be best out of three sets. Each set will be of 25 points. </li>
+	        <li>   In case of any dispute during the match, the decision of the referees will be considered final and binding. </li>
+	        <li>   Any disciplinary violation by any member of the team will lead to disqualification of the team. </li>
+	           <li>If a team arrives late by more than 15 minutes, it will be awarded a 2-0 (25-0, 25-0) loss. </li>
+	          <li> Teams should bring their own balls for practice. Match balls will be provided for the matches. </li>
+	        <li> The schedule of the tournament is subject to change at any point of time, so the teams are requested to check the notice board regularly. </li>
+
+					<h2>ENTRY FEES:</h2>Entry fee for each team is 1000 INR.
+					<h2>CASH PRIZES:</h2>
+					<li>	Winning team will be awarded 8000 INR. </li>
+					<li>	Runners up will be awarded 4000 INR. </li>
+
+
+<h1>	GIRLS </h1>
+
+	        <li>   Maximum players allowed in a team - 10.
+	        <li>   All standard FIVB rules applicable.
+	        <li>   "Rotation" rule will be followed during all matches, unless both the teams agree to play "fixed". </li>
+	        <li>   The format of the tournament will be decided upon the arrival of teams. </li>
+	        <li>   All league matches will be best out of 3 sets. Each set will be of 25 points. </li>
+	        <li>   The schedule of the tournament will be provided to the teams upon their arrival and is subject to change at any point of time, so the teams are requested to check the notice board regularly. </li>
+	        <li>   In case of any dispute during the match, the decision of the referees will be considered final and binding. </li>
+	        <li>   Any disciplinary violation by any member of the team will lead to disqualification of that team. </li>
+	        <li>   All the players will be required to show their ID cards before the beginning of the match failing which the defaulting inpidual will not be allowed to play. </li>
+	        <li> Teams should report to the court half an hour before their match. </li>
+	        <li> If a team arrives late by more than 15 minutes, it will be awarded a 2-0 (25-0, 25-0) loss. </li>
+	        <li> Teams should bring their own balls for practice. Match balls will be provided for the match. </li>
+
+					<h2>ENTRY FEES:</h2>Entry fee for each team is 1000 INR.
+					<h2>CASH PRIZES:</h2>
+					<li>	Winning team will be awarded 8000 INR. </li>
+					<li>	Runners up will be awarded 4000 INR. </li>
+
+
+			<h3>PRASHANT CHAUDHARY (VOLLEYVALL M): 8585967926 </h3>
+		<h3>	RAJNANDINI (VOLLEYBALL W): 8750699862 </h3>
+<div class="mybutton" onclick="window.open('./registration/register.php','_blank');"> REGISTER </div>
 
 
 </div>
-<div id="basketball" class="white-popup mfp-with-anim mfp-hide">
 
-<h1> put rules here </h1>
-
-
-</div>
 
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js'></script>
