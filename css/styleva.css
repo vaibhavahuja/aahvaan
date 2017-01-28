@@ -151,7 +151,7 @@ body::-webkit-scrollbar-thumb {
 .line{
 	content: '';
 	border-top: solid 1px white;
-	width: 10em;
+	width: 13em;
 	display: block;
 	margin: 0 auto 1em auto;
 	}
@@ -169,6 +169,27 @@ body::-webkit-scrollbar-thumb {
   width: auto;
   max-width: 900px;
   margin: 0 auto;
+  margin-top:15px;
+
+}
+
+@media(max-width:768px){
+.white-popup {
+  font-size: 15px;
+  position: relative;
+  background: #FFF;
+  padding: 25px;
+  width: auto;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top:15px;
+}
+
+.white-popup>h1{
+	font-size: 30px;
+
+	
+}
 
 }
 
