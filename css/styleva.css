@@ -34,7 +34,7 @@ body::-webkit-scrollbar-thumb {
 	z-index:50000;
 	font-size:20px;
 	border:1px white solid;
-	border-radius:10px;
+	border-radius:5px;
 	color:white;
 	text-align:center;
 	font-weight:700;
