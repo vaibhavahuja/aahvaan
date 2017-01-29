@@ -23,6 +23,37 @@ body::-webkit-scrollbar-thumb {
   background-color: #ffc800;
   outline: 1px solid slategrey;
 }
+.registerButton{
+
+	margin-top:50px;
+	display:block;
+	margin: 0 auto;
+	height:45px;
+	width:auto;
+	padding:10px;
+	z-index:50000;
+	font-size:20px;
+	border:1px white solid;
+	border-radius:10px;
+	color:white;
+	text-align:center;
+	font-weight:700;
+	padding-top:8px;
+	background:rgba(0,0,0,0.15);
+	text-decoration:none;
+	transition:0.14s linear;
+	
+
+}
+
+.registerButton:hover{
+	background-color:#ffc800;
+	transition:0.14s linear;
+	color:black;
+
+}
+
+
 
 .okokok{
 	text-align:left;
@@ -401,8 +432,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .mybutton{
-	height:45px;
-	width:180px;
+	margin-top:25px;
+	display:block;
+	margin: 0 auto;
+	height:35px;
+	width:140px;
 	z-index:1;
 	font-size:20px;
 	border:none;
@@ -411,8 +445,7 @@ body::-webkit-scrollbar-thumb {
 	background-color:black;
 	text-align:center;
 	font-weight:700;
-	padding-top:7.5px;
-
+	padding-top:4px;
 }
 
 .mybutton:hover{
