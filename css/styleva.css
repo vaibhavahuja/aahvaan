@@ -539,12 +539,12 @@ body::-webkit-scrollbar-thumb {
 
 /* other events */
 .otherevents{
-	height:800px;
+	height:auto;
 	width:auto;
-	margin-top:60px;
+	margin-top:80px;
 	margin-left:auto;
 	margin-right:auto;
-	margin-bottom:60px;
+	margin-bottom:90px;
 }
 
 .color-list {
@@ -552,9 +552,25 @@ body::-webkit-scrollbar-thumb {
   margin-top:100px;
   margin-right:100px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 40vh;
+  
 }
+/* will stack vertically */
+@media(max-width:768px){
+.color-list {
+  margin-left:40px;
+  margin-top:40px;
+  margin-right:40px;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+}
+
+}
+
+
+
 .otherbutton{
 	height:40px;
 	width:150px;
@@ -574,58 +590,48 @@ body::-webkit-scrollbar-thumb {
 }
 
 .color {
-
   display: flex;
   flex-direction: column;
   flex: 1 0 10em;
- /* box-shadow: 0 0 30px #424242;
-  background-attachment: fixed;
+  box-shadow: 0 0 30px #424242;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover; 
   overflow: hidden;
   padding: 1em;
   color: white;
   transition: flex-basis 500ms ease-in-out;
-  transition: flex-basis 500ms ease-in-out,
+  filter: grayscale(10%);
+  
+
 }
 
 .color:hover {
-
-      flex-basis: 20em;
+	cursor:pointer;
+	filter: grayscale(0%);
+    flex-basis: 29em;
 }
 
+@media (max-width:768px){
+.color:hover {
+	cursor:pointer;
+	filter: grayscale(0%);
+    flex-basis: 10em;
+}	
+
+
+
+	
+	
+	
+}
 .color:hover .details {
   opacity: 1;
 }
 
-.name {
-  font-size: 1.2em;
-  font-weight: 700;
-  font-family:"Oswald";
-  text-shadow: 0.02em -0.02em 0.2em rgba(10,10,10,0.9);
-
+	
+	
 }
-
-.details {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  opacity: 0;
-  -webkit-transition: opacity 500ms ease-in-out;
-  transition: opacity 500ms ease-in-out;
-}
-
-.details li {
-  font-size: 1em;
-  line-height: 2em;
-}
-
-
-
-
-
-
 
 
 
@@ -835,9 +841,47 @@ margin-right: 10px;
 
 
 
+/* color run */
+
+.color-run{
+	width: 80%;
+	margin: 0 auto;
+	background-image:url("color.gif");
+	background-size:cover;
+	background-position: center center;
+	height: 400px;
+	box-shadow: 10px 10px 10px #adadad;
+	border-radius:10px;
+	transition:0.3s linear;
+	filter: brightness(100%);
+	margin-top:60px;
+
+}
+
+@media(max-width:768px){
+
+.color-run{
+	width: 95%;
+	margin: 0 auto;
+	background-image:url("color.gif");
+	background-position: center center;
+	height: 20vh;
+	box-shadow: 5px 5px 5px #adadad;
+	border-radius:8px;
+	margin-top:60px;
+
+}
+
+}
 
 
 
+.color-run:hover{
+	box-shadow: 7px 7px 7px #888888;
+	transition:0.3s linear;
+	filter: brightness(85%);
+
+}
 
 
 
