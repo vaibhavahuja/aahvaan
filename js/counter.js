@@ -3,7 +3,7 @@
     (function ($) {
         function readyFn() {
             $(function () {
-				newYearsDay = new Date("2017-03-23");
+				newYearsDay = new Date("2017-03-24");
 				$('#countdown').countdown({until: newYearsDay});
 			});
 			

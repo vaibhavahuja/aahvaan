@@ -1,0 +1,7 @@
+[30-Jan-2017 13:22:53 UTC] PHP Notice:  Undefined index: name in /home/arrow/public_html/registration/connect.php on line 20
+[30-Jan-2017 13:22:53 UTC] PHP Notice:  Undefined index: college in /home/arrow/public_html/registration/connect.php on line 21
+[30-Jan-2017 13:22:53 UTC] PHP Notice:  Undefined index: teamname in /home/arrow/public_html/registration/connect.php on line 22
+[30-Jan-2017 13:22:53 UTC] PHP Notice:  Undefined index: Players in /home/arrow/public_html/registration/connect.php on line 23
+[30-Jan-2017 13:22:53 UTC] PHP Notice:  Undefined index: conatct in /home/arrow/public_html/registration/connect.php on line 24
+[30-Jan-2017 13:22:53 UTC] PHP Notice:  Undefined index: mail in /home/arrow/public_html/registration/connect.php on line 25
+[30-Jan-2017 13:22:53 UTC] PHP Notice:  Undefined index: accomo in /home/arrow/public_html/registration/connect.php on line 26
